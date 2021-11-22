@@ -25,10 +25,6 @@
     "android": {
       "package": "com.irshad.ticktock",
       "versionCode": 1,
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
     },
     "web": {
       "favicon": "./assets/icon.png"

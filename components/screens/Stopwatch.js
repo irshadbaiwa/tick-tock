@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Text, View, TouchableOpacity, Platform, UIManager, LayoutAnimation } from "react-native";
 import { Audio } from "expo-av";
+import { activateKeepAwake, deactivateKeepAwake } from "expo-keep-awake";
 import styles, { theme } from "../styles/styles";
 import { Ionicons } from '@expo/vector-icons';
 
@@ -138,6 +139,8 @@ export default class Stopwatch extends Component {
               onPress={() => {
                 // Animate layout
                 LayoutAnimation.configureNext(LayoutAnimation.Presets.linear);
+                // Deactivate keep  awake
+                deactivateKeepAwake();
                 // Reset stopwatch
                 this.reset();
                 }
@@ -158,6 +161,8 @@ export default class Stopwatch extends Component {
               onPress={() => {
                 // Animate layout
                 LayoutAnimation.configureNext(LayoutAnimation.Presets.linear);
+                // Keep screen awake while counting
+                activateKeepAwake();
                 // start counting
                 this.startCounter();
                 }
@@ -174,6 +179,8 @@ export default class Stopwatch extends Component {
               onPress={() => {
                 // Animate layout
                 LayoutAnimation.configureNext(LayoutAnimation.Presets.linear);
+                // Deactivate keep awake
+                deactivateKeepAwake();
                 // Finish counting
                 this.finish();
                 }

@@ -3,6 +3,7 @@ import { TouchableOpacity, Text, View, TextInput, Vibration, Platform, UIManager
 import { Ionicons } from '@expo/vector-icons';
 import styles, { theme } from "../styles/styles";
 import { Audio } from "expo-av";
+import { activateKeepAwake, deactivateKeepAwake } from "expo-keep-awake";
 
 // Android animation configuration
 if (Platform.OS === "android" && UIManager.setLayoutAnimationEnabledExperimental) {
@@ -42,6 +43,8 @@ export default class Timer extends Component {
       counting: true,
       finished: false
     });
+    // Keep screen awake while counting
+    activateKeepAwake();
 
     // start timer
     this.timerId = setInterval(() => {
@@ -101,6 +104,8 @@ export default class Timer extends Component {
       counting: false,
       finished: true,
     })
+    // deactivate keep awake
+    deactivateKeepAwake();
   }
 
   setTime = (valueString, variable) => {
