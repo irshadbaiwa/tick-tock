@@ -1,0 +1,186 @@
+import { StyleSheet } from 'react-native';
+
+// App theme
+export const theme = {
+  dark: false,
+  colors: {
+    primary: 'rgb(15, 130, 145)',
+    background: 'rgb(235, 235, 235)',
+    text: 'rgb(50, 50, 60)',
+    border: 'rgb(204, 204, 204)',
+    backgroundCard: 'rgb(255, 255, 255)',
+  }
+};
+
+// Styles
+const styles = StyleSheet.create({
+  page: {
+    flex: 1,
+  },
+  textFont: {
+    fontFamily: 'Poppins',
+  },
+  digitFont: {
+    fontFamily: 'SyneMono',
+  },
+  shadow: {
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+  },
+  inputBox: {
+    height: 50,
+    width: 70,
+    borderRadius: 15,
+    borderWidth: 3,
+    borderColor: 'rgba(15, 130, 145, 0.6)',
+    padding: 10,
+    margin: 10
+  },
+  center: {
+    alignItems:'center',
+    justifyContent: 'center',
+  },
+  row: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly',
+  },
+  clockRounded: {
+    height: 220,
+    width: 220,
+    position: 'relative',
+    flexDirection:'row',
+    backgroundColor: 'rgba(15, 130, 145, 0.3)',
+    borderRadius: 110,
+    borderWidth: 1,
+    borderColor: theme.colors.border,
+    margin: 10,
+    marginTop: 10,
+    overflow: 'hidden',
+  },
+  clockAxis: {
+    height: 14,
+    width: 14,
+    position: 'absolute',
+    top: 103,
+    left: 103,
+    borderRadius: 7,
+    backgroundColor: theme.colors.primary,
+    zIndex: 50,
+  },
+  hourHand: {
+    height: 4,
+    width: 60,
+    position: 'absolute',
+    top: 110,
+    left: 110,
+    borderRadius: 2,
+    backgroundColor: theme.colors.primary,
+    zIndex: 20,
+  },
+  minHand: {
+    height: 3,
+    width: 80,
+    position: 'absolute',
+    top: 110,
+    left: 110,
+    borderRadius: 1.5,
+    backgroundColor: theme.colors.primary,
+    zIndex: 30,
+  },
+  secHand: {
+    height: 2,
+    width: 90,
+    position: 'absolute',
+    top: 110,
+    left: 110,
+    backgroundColor: '#b5370d',
+    zIndex: 40,
+  },
+  clockDigital: {
+    height: 20,
+    width: 40,
+    backgroundColor: theme.colors.background,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: theme.colors.border,
+    alignItems:'center', 
+    justifyContent:'center', 
+    flexDirection:'row', 
+    overflow:'hidden',
+    position: 'absolute',
+    top: 50,
+    left: 90,
+    zIndex: 10,
+  },
+  clockDigits: {
+    fontSize: 12,
+    color: theme.colors.text,
+  },
+  clockDate: {
+    height: 20,
+    width: 70,
+    backgroundColor: theme.colors.background,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: theme.colors.border,
+    alignItems:'center', 
+    justifyContent:'center', 
+    padding: 1,  
+    overflow:'hidden',
+    position: 'absolute',
+    top: 150,
+    left: 80,
+    zIndex: 10,
+  },
+  cityClockContainer: {
+    height: 150,
+    width: 150,
+    margin: 5,
+    borderTopRightRadius: 10,
+    borderTopLeftRadius: 10,
+    overflow: 'hidden',
+  },
+  cityNameView: {
+    height: 30,
+    overflow:'hidden', 
+    backgroundColor:'white', 
+    borderBottomRightRadius:10, 
+    borderBottomLeftRadius:10, 
+  },
+  stopWatchTime: {
+    fontSize: 40,
+    color: theme.colors.primary,
+    padding: 15,
+    margin: 10,
+    backgroundColor: theme.colors.backgroundCard,
+    borderRadius: 10,
+    overflow: 'hidden',
+  },
+  startButton: {
+    padding: 10,
+    margin: 10,
+    height: 80,
+    width: 80,
+    borderRadius: 40,
+    backgroundColor: theme.colors.primary,
+    overflow:'hidden',
+  },
+  timerTime: {
+    fontSize: 40,
+    color: theme.colors.primary,
+    padding: 15,
+    margin: 10,
+    backgroundColor: theme.colors.backgroundCard,
+    borderRadius: 10,
+    overflow: 'hidden',
+  }
+});
+
+export default styles;

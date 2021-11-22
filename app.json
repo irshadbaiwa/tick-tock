@@ -17,16 +17,21 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.irshad.ticktock",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
+
     },
     "android": {
+      "package": "com.irshad.ticktock",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/icon.png"
     }
   }
 }

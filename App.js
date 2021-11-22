@@ -1,21 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import Main from './components/Main';
+import * as Font from 'expo-font';
+import AppLoading from 'expo-app-loading';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+export default class App extends React.Component {
+  state = {
+    isReady: false,
+  }
+
+  loadFonts = async () => {
+    await Font.loadAsync({
+      Poppins: require('./assets/fonts/Poppins.ttf'),
+      SyneMono: require('./assets/fonts/SyneMono-Regular.ttf'),
+    });
+  }
+
+  render() {
+    if (!this.state.isReady) {
+      return (
+        <AppLoading
+          startAsync={this.loadFonts}
+          // Set state to ready when fonts are loaded
+          onFinish={() => this.setState({isReady: true})}
+          // Ignore and use default fonts when an error occurs
+          onError={(error) => this.setState({isReady: true})}
+        />
+      );
+    }
+    return (
+      <Main />
+    );
+  }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
