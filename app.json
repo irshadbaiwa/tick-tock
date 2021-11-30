@@ -24,7 +24,7 @@
     },
     "android": {
       "package": "com.irshad.ticktock",
-      "versionCode": 1,
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/icon.png"

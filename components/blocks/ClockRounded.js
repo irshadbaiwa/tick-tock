@@ -21,8 +21,6 @@ export default function ClockRounded({moment}) {
       <View style={styles.clockAxis} />
       <View 
         style={[styles.hourHand, {
-          // Point of rotation logic adopted from a post in StackOverflow
-          // https://stackoverflow.com/a/58444898/14047307
           transform: [
             {translateX: -30},
             {translateY: 0},

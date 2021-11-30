@@ -1,7 +1,7 @@
 # **tick-tock**
 ## CS50x Final Project
 
-### Youtube Demo: [link](url)
+### Youtube Demo: [link](https://youtu.be/5G3abgzssE8)
 ### Description
 
 tick-tock is a cross-platform (Android, iOS, web) app developed using [react-native](https://reactnative.dev/) and [expo](https://expo.dev/) tools. 
