@@ -12,27 +12,27 @@ It's interface contains a **Clock**; which shows the current local time and some
 - App.js
 - app.json
 - package.json
-- build
+- build/
   - tick-tock.apk
-- components
+- components/
   - Main.js
-  - navigation
+  - navigation/
     - RootNavigation.js
-  - screens
+  - screens/
     - Clock.js
     - Stopwatch.js
     - Timer.js
-  - blocks
+  - blocks/
     - ClockRounded.js
     - CityClock.js
-  - styles
+  - styles/
     - styles.js
-- utils
+- utils/
   - dateFormat.js
-- assets
-  - cities
-  - fonts
-  - sounds
+- assets/
+  - cities/
+  - fonts/
+  - sounds/
   - icon.png
   - splash.png
 
@@ -46,34 +46,34 @@ Contains metadata about the app used when  building the app
 #### package.json
 Specifies the framework and libraries used to build the project
 
-#### build
+#### build/
 This contain the apk file of the app (for Android)
 
-#### Components
+#### Components/
 This folder contains the various components of the app.
 It is subsectined into navigation, screens, styles, blocks and Main.js
 
 ##### Main.js
 This loads App Navigation component
 
-##### navigation
+##### navigation/
 Contains RootNavigation.js which is the Navigation Conatiner (Bottom tabs) of the app
 
-##### screens
+##### screens/
 Clock.js is the screen for the live clock
 
 Stopwatch.js is the screen for the stopwatch
 
 Timer.js contains timer logic
 
-##### blocks
+##### blocks/
 This folder contains the building block used by screens
 
-##### styles
+##### styles/
 Contains style and theme of the app
 
-#### utils
+#### utils/
 dateFormat.js defines helper functions that format time instances
 
-#### assets
+#### assets/
 This folder containers static files. This include the icon, splash screen, images, fonts and sounds
